@@ -20,7 +20,6 @@ public class VisibleElement {
         Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
         Page page = browser.newPage();
         page.navigate("https://www.amazon.in/");
-
         int count = page.locator("a:visible").count();
         System.out.println("Count of links"+count);
 
